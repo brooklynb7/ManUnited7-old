@@ -1,0 +1,32 @@
+<div class="form-group">
+	<label for="title"><%=__("title")%><span class='required'>*</span></label>
+	<input type="text" class="form-control input-sm" id="title" name='title' value="<%if(typeof post != "undefined") {%><%= post.title%><%}%>" placeholder="<%=__("title")%>" />
+</div>
+<div class="form-group">
+	<label for="slug"><%=__("slug")%><span class='required'>*</span></label>
+	<input type="text" class="form-control input-sm" id="slug" name='slug' placeholder="<%=__("slug")%>" value="<%if(typeof post != "undefined") {%><%= post.slug%><%}%>" />
+</div>
+<div class="form-group">
+	<label for="editor"><%=__("content")%><span class='required'>*</span></label>
+	<textarea id="editor"></textarea>
+	<input type='hidden' id='content' name='content'  value="<%if(typeof post != "undefined") {%><%= post.content%><%}%>"/>
+</div>
+<div class="form-group ">
+	<label for="tag"><%=__("tag")%>(<%=__("seperateTag")%>)</label>
+	<input type="text" class="form-control input-sm" id="tag" name='tag' placeholder="<%=__("tag")%>" value="<%if(typeof post != "undefined") {%><%= post.tag.join('|')%><%}%>"/>
+</div>
+<div class="row">
+	<div class="form-group col-xs-6">
+		<label for="source"><%=__("source")%></label>
+		<input type="text" class="form-control input-sm" id="source" name='source' placeholder="<%=__("source")%>" value="<%if(typeof post != "undefined") {%><%= post.source%><%}%>"/>
+	</div>
+	<div class="form-group col-xs-6">
+		<label for="originalUrl"><%=__("originalUrl")%></label>
+		<input type="text" class="form-control input-sm" id="originalUrl" name='originalUrl' placeholder="<%=__("originalUrl")%>" value="<%if(typeof post != "undefined") {%><%= post.originalUrl%><%}%>" />
+	</div>
+</div>
+<div class="checkbox">
+	<label>
+		<input type="checkbox" id='visible' name='visible' <%if(typeof post != "undefined") {%><%= (post.visible ? "checked" : "") %><%} else {%>checked<% } %> /><%=__("visible")%>
+	</label>
+</div>

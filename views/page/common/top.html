@@ -1,0 +1,27 @@
+<nav class="header navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a href="/" class='logo'><%=brand %></a>
+	</div>
+	<div class="collapse navbar-collapse" id="navBar">
+		<ul class="nav navbar-nav">
+			<li><a href="/posts"><%=__("articleList")%></a></li>
+		</ul>
+		<p class="navbar-text navbar-right">
+			<a href="javascript:void(0);" class="i18n en">English</a>
+			<a href="javascript:void(0);" class="i18n zh">中文</a>
+			<% if(locals.session.user_id) {%>
+				<a href='/profile'><%= locals.session.user_name%></a>
+				<a href='/logout' class='logout glyphicon glyphicon-off'></a>
+			<%} else {%>
+				<a href='/login'><%=__("signIn")%></a>
+				<!-- <wb:login-button type="4,2" onlogin="login" onlogout="logout"><%=__("signIn")%></wb:login-button> -->
+			<%}%>
+		</p>
+	</div>
+</nav>

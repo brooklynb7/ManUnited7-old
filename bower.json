@@ -1,0 +1,25 @@
+{
+	"name": "myUnited",
+	"version": "0.0.0",
+	"homepage": "https://github.com/brooklynb7/myUnited",
+	"authors": [
+		"Brooklyn Huang <brooklyn.huang@sap.com>"
+	],
+	"license": "MIT",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"jquery": "1.10.*",
+		"bootstrap": "*",
+		"underscore": "*",
+		"jquery-i18n": "~1.1.1",
+		"jquery-placeholder": "*",
+		"jquery-cookie": "~1.4.0"
+	}
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include common/head.html %>
+		<script type="text/javascript" src='/resources/javascripts/lib/jquery.placeholder.min.js'></script>
+	</head>
+	<body>
+		<%- include common/top.html %>
+		<form class="form-signin" method="POST" role="form">
+			<h2 class="form-signin-heading"><%=__("pleaseSignIn")%></h2>
+			<input type="text" id='userNameInput' name="user" class="form-control" placeholder="<%=__("userName")%>" autofocus="" />
+			<input type="password" id="pwdInput" name="password" class="form-control" placeholder="<%=__("password")%>" />
+			<p class="text-danger errorMsg"><%=errorMsg %></p>
+			<button class="btn btn-lg btn-red btn-block" id='signInBtn' type="submit"><%=__("signIn")%></button>
+		</form>
+		<script type="text/javascript" src='/resources/javascripts/admin/login.js'></script>
+	</body>
+</html>

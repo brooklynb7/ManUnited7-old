@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include common/head.html %>
+		<script type="text/javascript" src='/resources/javascripts/lib/jquery.placeholder.min.js'></script>
+	</head>
+	<body>
+		<%- include common/top.html %>
+		<form class="form-signin" method="POST" role="form">
+			<h2><%=__("initializeSystem")%></h2>
+			<% if(typeof msg != 'undefined'){ %>
+				<p> 初始化成功，请
+					<a href='/admin/login'>登录</a>
+				</p>
+			<% } else if (typeof installed == 'undefined'){ %>
+				<div>
+					<span class="help-block">初始化数据，将创建一个用户，并生成一篇文章及评论</span>
+					<span class="help-block">请设置一个用户名密码</span>
+				</div>
+				<input type="text" id='userNameInput' name="user" class="form-control" placeholder="<%=__("userName")%>" autofocus="">
+				<input type="password" id="pwdInput" name="password" class="form-control" placeholder="<%=__("password")%>">
+				<p class="text-danger errorMsg"></p>
+				<button class="btn btn-lg btn-red btn-block" id='initializeBtn' type="submit"><%=__("initialize")%></button>
+			<% } else { %>
+				<p>已经初始化过数据库了</p>
+			<% } %>
+		</form>
+		<script type="text/javascript" src='/resources/javascripts/admin/install.js'></script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html <%- include common/xmlns_wb.html %>>
+	<head>
+		<%- include common/head.html %>
+		<script type="text/javascript" src='/resources/javascripts/lib/jquery.placeholder.min.js'></script>
+	</head>
+	<body>
+		<%- include common/top.html %>
+		<div class='content'>
+			<div class="panel panel-default">
+				<div class="panel-heading"><%= __("changePwd") %></div>
+				<div class="panel-body">
+					<form class="form" method='POST' action='/admin/changePwd' role="form">
+						<div class="form-group">
+							<input type="password" class="form-control" name='currentPwd' id="currentPwd" placeholder="<%=__("currentPwd")%>">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" name='newPwd' id="newPwd" placeholder="<%= __("newPwd") %>">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" name='confirmPwd' id="confirmPwd" placeholder="<%= __("confirmPwd") %>">
+						</div>
+						
+						<button type="submit" id='changePwdBtn' class="btn btn-red"><%= __("changePwd") %></button>
+						<span class="text-danger errorMsg">
+							<%if(typeof errorMsgForChangePwd != "undefined") {%>
+								<%= errorMsgForChangePwd%>
+							<%}%>
+						</span>
+						<span class="text-success successMsg">
+							<%if(typeof successChangePwd != "undefined") {%>
+								<%= successChangePwd%>
+							<%}%>
+						</span>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src='/resources/javascripts/admin/profile.js'></script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include common/head.html %>
+		<script type="text/javascript" src='/resources/javascripts/lib/jquery.placeholder.min.js'></script>
+		<script src="/resources/javascripts/lib/ckeditor/ckeditor.js"></script>
+		<script src="/resources/javascripts/lib/ckeditor/config.js"></script>
+		<script src="/resources/javascripts/lib/ckeditor/adapters/jquery.js"></script>
+	</head>
+	<body>
+		<%- include common/top.html %>
+		<div class='content'>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<ol class="breadcrumb">
+						<li><a href="/admin"><%= __("home")%></a></li>
+						<li><a href="/admin/post"><%= __("articleList")%></a></li>
+						<li class="active"><%= __("editArticle") %></li>
+						<a href='/admin/post/new' class='btn btn-xs btn-red pull-right'><%=__("newArticle")%></a>
+					</ol>
+				</div>
+				<div class="panel-body">
+					<form role="form" method="POST">						
+						<%- include common/postForm.html %>			
+						<div class="form-group">
+							<a id='editBtn' data-loading-text="Loading..." type="submit" class="btn btn-red btn-sm"><%=__("edit")%></a>
+							<span class="text-danger errorMsg"></span>
+						</div>
+						<input type='hidden' id='postId' name='postId' value="<%if(typeof post != "undefined") {%><%= post._id%><%}%>"/>
+					</form>					
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src='/resources/javascripts/admin/postNewEdit.js'></script>
+	</body>
+</html>

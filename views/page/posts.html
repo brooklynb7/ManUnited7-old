@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html <%- include common/xmlns_wb.html %>>
+	<head>
+		<%- include common/head.html %>
+	</head>
+	<body>
+		<%- include common/top.html %>
+		<div class='content'>
+			<ol class="breadcrumb">
+				<li><a href="/"><%=__('home')%></a></li>
+				<li class="active"><%=__('articleList')%></li>
+			</ol>
+			<%posts.forEach(function(item){%>
+			<div class="post-block panel panel-default">
+				<div class="panel-body">
+					<h3><a href="/post/<%=item.slug%>"><%=item.title%></a></h3>
+					<h6><%=moment(item.create_at).format(timeFormat1)%></h6>
+					<div><%-item.content%></div>
+				</div>
+			</div>
+			<%})%>
+		</div>
+	</body>
+</html>

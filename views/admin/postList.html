@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include common/head.html %>
+	</head>
+	<body>
+		<%- include common/top.html %>
+		<div class='content'>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<ol class="breadcrumb">
+						<li><a href="/admin"><%= __("home")%></a></li>
+						<li class="active"><%= __("articleList")%></li>
+						<a href='/admin/post/new' class='btn btn-xs btn-red pull-right'><%=__("newArticle")%></a>
+					</ol>
+				</div>
+				<div class="panel-body">
+					<div class="list-group">
+					<% postList.forEach(function(item){ %>
+						<div class="list-group-item" id='<%=item._id%>'>
+							<a href='/admin/post/edit/<%=item._id%>'><%=item.title%></a>
+							<a href='javascript:void(0)' class='pull-right removePost glyphicon glyphicon-remove' post-id='<%=item._id%>' post-title='<%=item.title%>'></a>
+							<span class='pull-right'><%=moment(item.create_at).format(timeFormat1)%></span>
+						</div>
+					<% }) %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src='/resources/javascripts/modal.js'></script>
+		<script type="text/javascript" src='/resources/javascripts/admin/postList.js'></script>
+	</body>
+</html>

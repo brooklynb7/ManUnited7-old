@@ -1,0 +1,110 @@
+body {
+	margin:0;
+	padding: 0;
+	font-size: 14px;
+	font-family:"Microsoft Yahei", "Trebuchet MS", Georgia,"Times New Roman",Times,sans-serif;
+	background-color: #eee;
+}
+a, a:visited{
+	text-decoration: none;
+}
+.required{
+	color:#c00;
+}
+.bold{
+	font-weight: bold;
+}
+.header{
+	color: #fff;
+	margin-bottom: 20px;
+	background: #bd0006;
+	box-shadow: 0 3px 10px #ccc;
+}
+.header.navbar-default .navbar-text,
+.header.navbar-default .navbar-text a{
+	color: #fff;
+}
+.header .navbar-collapse{
+	padding-left: 30px;
+}
+.header .navbar-right a{
+	margin-right: 10px;
+}
+a.logo, a:hover.logo{
+	float: left;
+	padding: 14px 30px 10px 30px;
+	font-size: 18px;
+	color:#fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+	background-color: #bd0006;
+}
+
+.btn-red,.btn-red:focus {
+	color:#fff;
+	background-color: #bd0006;
+	border-color: #bd0006;
+	outline: none;
+}
+.btn-red:hover,  .btn-red.active{
+	color:#fff;
+	background-color: #c90008;
+	border-color: #c90008;
+}
+.btn-red.disabled, 
+.btn-red[disabled],
+.btn-red.disabled:hover, 
+.btn-red[disabled]:hover{
+	background-color: #bd0006;
+	border-color: #bd0006;
+}
+:focus{
+	outline: none;
+}
+label{
+	font-weight:normal;
+}
+
+div.content{
+	padding-left:10px;
+	padding-right:10px;
+}
+.list-group{
+	margin-bottom: 0px;
+}
+.list-group-item .glyphicon{
+	top: 4px;
+	font-size: 12px;
+	margin-left: 5px;
+}
+.glyphicon-remove{
+	color:#bd0006;
+}
+.glyphicon-remove:hover,
+.glyphicon-remove:focus{
+	color:#bd0006;
+}
+.form-group{
+	margin-bottom: 5px;
+}
+.panel-heading .breadcrumb{
+	padding-left: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.post-block .panel-body{
+	padding: 15px 25px;
+}
+.post-block .panel-body h3{
+	color: #bd0004;
+	margin-top: 10px;
+}
+.post-block .panel-body h6{
+	margin-top: 15px;
+	color: #999;
+}
