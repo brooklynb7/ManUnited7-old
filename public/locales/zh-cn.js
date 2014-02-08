@@ -32,12 +32,13 @@
 	"source": "来源",
 	"fillTitle": "请填写标题",
 	"fillSlug": "请填写Slug",
+	"fillShortDesc":"请填写概要描述",
 	"fillContent": "请填写内容",
 	"visible": "可见",
 	"slugExsit": "Slug已经存在",
 	"edit": "编辑",
 	"home": "首页",
 	"pageNotFount": "该页面不存在哦，亲",
-	"short-desc":"概要描述",
+	"short_desc":"概要描述",
 	"restWord":"还能输入%s个字"
 }

@@ -39,10 +39,18 @@ exports.doPostEdit = function(req, res) {
 	});
 };
 
+exports.doPostDel = function(req, res) {
+	var id = req.body.postId;
+	postDao.del(id, function(error, rst) {
+		returnNormalServiceResult(res, rst, error);
+	});
+};
+
 var getPostObject = function(req) {
 	return {
 		title: req.body.title,
 		slug: req.body.slug,
+		short_desc: req.body.short_desc,
 		content: req.body.content,
 		tag: req.body.tag.split('|'),
 		source: req.body.source,
@@ -50,11 +58,4 @@ var getPostObject = function(req) {
 		visible: parseInt(req.body.visible),
 		create_at: new Date().getTime()
 	};
-};
-
-exports.doPostDel = function(req, res) {
-	var id = req.body.postId;
-	postDao.del(id, function(error, rst) {
-		returnNormalServiceResult(res, rst, error);
-	});
 };

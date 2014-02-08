@@ -11,6 +11,12 @@ exports.posts = function(req, res) {
 	postDao.getAll(function(err, rst) {
 		if (err) util.sendSysError(500, err, res);
 		else {
+			for (var i = 0; i < rst.length; i++) {
+				if (rst[i].content.indexOf('<!--more-->') > 0) {
+					rst[i].content = rst[i].content.substring(0, rst[i].content.indexOf('</p><!--more-->')) + 
+									'<a href="/post/' + rst[i].slug + '">more</a>';
+				}
+			}
 			res.render('page/posts', {
 				posts: rst
 			});

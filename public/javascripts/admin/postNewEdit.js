@@ -91,7 +91,10 @@
 		} else if (!$.trim($("#slug").val())) {
 			showErrorMsg($.i18n._("fillSlug"));
 			return false;
-		} else if (!$.trim($("#content").val())) {
+		}/* else if (!$.trim($("#short_desc").val())) {
+			showErrorMsg($.i18n._("fillShortDesc"));
+			return false;
+		} */else if (!$.trim($("#content").val())) {
 			showErrorMsg($.i18n._("fillContent"));
 			return false;
 		} else {

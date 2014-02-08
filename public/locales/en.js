@@ -32,12 +32,13 @@
 	"source":"Source",
 	"fillTitle":"Please fill the title",
 	"fillSlug":"Please fill the slug",
+	"fillShortDesc":"Please fill the short description",
 	"fillContent":"Please fill the content",
 	"visible": "Visible",
 	"slugExsit":"The slug is exsited",
 	"edit": "Edit",
 	"home": "Home",
 	"pageNotFount":"Page Not Found",
-	"short-desc":"Short description",
+	"short_desc":"Short description",
 	"restWord":"%s words left"
 }

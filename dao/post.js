@@ -3,7 +3,8 @@ db.bind("post");
 
 exports.getList = function(callback) {
 	db.post.find({}, {
-		"content": 0
+		"content": 0,
+		"short_desc": 0
 	}).sort({
 		create_time: -1,
 		_id: -1

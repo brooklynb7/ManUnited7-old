@@ -8,6 +8,9 @@ body {
 a, a:visited{
 	text-decoration: none;
 }
+p {
+	margin: 0 0 15px;
+}
 .required{
 	color:#c00;
 }
@@ -98,13 +101,22 @@ div.content{
 }
 
 .post-block .panel-body{
-	padding: 15px 25px 20px 25px;
+	padding: 10px 20px 15px;
 }
 .post-block .panel-body h3{
-	color: #bd0004;
+	color: #bd0006;
 	margin-top: 10px;
 }
 .post-block .panel-body h6{
 	margin-top: 15px;
 	color: #999;
+}
+.post-content a{
+	padding: 0px 6px 2px;
+}	
+.post-content a:hover{
+	text-decoration: none;
+	background: #bd0006;
+	color: #fff;
+	border-radius: 3px;
 }
