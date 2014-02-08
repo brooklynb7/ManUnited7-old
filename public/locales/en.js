@@ -37,5 +37,7 @@
 	"slugExsit":"The slug is exsited",
 	"edit": "Edit",
 	"home": "Home",
-	"pageNotFount":"Page Not Found"
+	"pageNotFount":"Page Not Found",
+	"short-desc":"Short description",
+	"restWord":"%s words left"
 }

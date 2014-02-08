@@ -3,6 +3,7 @@ var user = require('./routes/user');
 var api = require('./routes/api');
 var admin = require('./routes/admin');
 var user = require('./routes/user');
+var weixin = require('./routes/weixin');
 
 module.exports = function(app) {
 	app.get('/', page.index);
@@ -27,6 +28,7 @@ module.exports = function(app) {
 	app.post('/api/post/new', admin.auth_admin, api.doPostNew);
 	app.post('/api/post/edit', admin.auth_admin, api.doPostEdit);
 	app.post('/api/post/del', admin.auth_admin, api.doPostDel);
+	weixin(app);
 
 	app.get('*', page.notFound);	
 };

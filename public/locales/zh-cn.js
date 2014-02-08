@@ -37,5 +37,7 @@
 	"slugExsit": "Slug已经存在",
 	"edit": "编辑",
 	"home": "首页",
-	"pageNotFount": "该页面不存在哦，亲"
+	"pageNotFount": "该页面不存在哦，亲",
+	"short-desc":"概要描述",
+	"restWord":"还能输入%s个字"
 }

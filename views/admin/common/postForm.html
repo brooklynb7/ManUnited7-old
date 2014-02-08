@@ -7,6 +7,13 @@
 	<input type="text" class="form-control input-sm" id="slug" name='slug' placeholder="<%=__("slug")%>" value="<%if(typeof post != "undefined") {%><%= post.slug%><%}%>" />
 </div>
 <div class="form-group">
+	<label for="short-desc">
+		<%=__("short-desc")%><span class='required'>*</span>
+		<span class="text-muted">(<%=__('restWord', '140')%>)</span>
+	</label>
+	<textarea type="text" class="form-control" id="short-desc" name='short-desc' placeholder="<%=__("short-desc")%>" rows='3' value="<%if(typeof post != "undefined") {%><%= post.short_desc%><%}%>"></textarea>
+</div>
+<div class="form-group">
 	<label for="editor"><%=__("content")%><span class='required'>*</span></label>
 	<textarea id="editor"></textarea>
 	<input type='hidden' id='content' name='content'  value="<%if(typeof post != "undefined") {%><%= post.content%><%}%>"/>
