@@ -7,7 +7,7 @@ module.exports = function(app) {
 	app.all('/api/weixin', wechat(config.weixin.token, function(req, res) {
 		var message = req.weixin;
 		if (is_subscribe_event(message)) {
-			res.reply('感谢您的关注，我们将竭诚为您提供来自曼联的第一手资讯！');
+			res.reply('感谢您的关注，我们将竭诚为您提供来自曼联的第一手资讯！更多内容请访问<a href="http://www.manunited7.com/">www.manunited7.com</a>！');
 		} else {
 			res.reply('');
 		}
