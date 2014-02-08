@@ -18,8 +18,8 @@
 		"jquery": "1.10.*",
 		"bootstrap": "*",
 		"underscore": "*",
-		"jquery-i18n": "~1.1.1",
+		"jquery-i18n": "*",
 		"jquery-placeholder": "*",
-		"jquery-cookie": "~1.4.0"
+		"jquery-cookie": "*"
 	}
 }
