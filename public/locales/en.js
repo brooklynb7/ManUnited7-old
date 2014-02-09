@@ -41,5 +41,6 @@
 	"pageNotFount":"Page Not Found",
 	"short_desc":"Short description",
 	"restWord":"%s words left",
-	"news": "News"
+	"news": "News",
+	"more": "More"
 }

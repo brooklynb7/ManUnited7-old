@@ -15,6 +15,7 @@ var returnNormalServiceResult = function(res, result, err) {
 
 exports.doPostNew = function(req, res) {
 	var post = getPostObject(req);
+	post.create_at = new Date().getTime();
 
 	postDao.getBySlug(post.slug, function(err, rst) {
 		if (err) util.sendSysError(500, err, res);
@@ -55,7 +56,6 @@ var getPostObject = function(req) {
 		tag: req.body.tag.split('|'),
 		source: req.body.source,
 		originalUrl: req.body.originalUrl,
-		visible: parseInt(req.body.visible),
-		create_at: new Date().getTime()
+		visible: parseInt(req.body.visible)
 	};
 };

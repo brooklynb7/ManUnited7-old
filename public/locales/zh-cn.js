@@ -41,5 +41,6 @@
 	"pageNotFount": "该页面不存在哦，亲",
 	"short_desc":"概要描述",
 	"restWord":"还能输入%s个字",
-	"news": "资讯"
+	"news": "资讯",
+	"more": "阅读全文"
 }

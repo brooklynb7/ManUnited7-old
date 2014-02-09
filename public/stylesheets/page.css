@@ -7,9 +7,11 @@ body {
 }
 a, a:visited{
 	text-decoration: none;
+	color: #2a6496;
 }
 p {
 	margin: 0 0 15px;
+	line-height: 1.6;
 }
 .required{
 	color:#c00;
@@ -47,7 +49,7 @@ a.logo, a:hover.logo{
 	background-color: #bd0006;
 }
 
-.btn-red,.btn-red:focus {
+.btn-red, .btn-red:visited, .btn-red:focus{
 	color:#fff;
 	background-color: #bd0006;
 	border-color: #bd0006;
@@ -114,16 +116,6 @@ div.content{
 	margin-top: 15px;
 	color: #999;
 }
-.post-content a{
-	padding: 0px 6px 2px;
-}	
-.post-content a:hover{
-	text-decoration: none;
-	background: #bd0006;
-	color: #fff;
-	border-radius: 3px;
-}
-
 .list-group-item.row{
 	margin-left: 5px;
 	margin-right: 5px;

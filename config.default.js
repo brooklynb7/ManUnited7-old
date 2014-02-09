@@ -14,6 +14,7 @@
 	}
 }
 */
+//mongodb settings for appfog mongodb service END
 
 var mongo = {
 	"hostname": "",
@@ -34,7 +35,6 @@ var generate_mongo_url = function(obj) {
 		return "mongodb://" + obj.hostname + ":" + obj.port + "/" + obj.db;
 	}
 };
-//mongodb settings for appfog mongodb service END
 
 var mongoskin = require('mongoskin');
 exports.db = mongoskin.db(generate_mongo_url(mongo));
@@ -52,7 +52,7 @@ i18n.configure({
 exports.i18n = i18n;
 
 exports.config = {
-	title: "",
+	title: "ManUnited 7",
 	port: process.env.PORT || 3000,
 	session_secret: process.env.SESSION_SECRET || '',
 	timeFormat1: "YYYY/MM/DD HH:mm:ss",

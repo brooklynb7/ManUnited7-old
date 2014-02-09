@@ -13,8 +13,8 @@ exports.posts = function(req, res) {
 		else {
 			for (var i = 0; i < rst.length; i++) {
 				if (rst[i].content.indexOf('<!--more-->') > 0) {
-					rst[i].content = rst[i].content.substring(0, rst[i].content.indexOf('</p><!--more-->')) + 
-									'<a href="/post/' + rst[i].slug + '">more</a>';
+					rst[i].content = rst[i].content.substring(0, rst[i].content.indexOf('<!--more-->')) +
+						'<p><a href="/post/' + rst[i].slug + '">'+ res.__('more') +'></a></p>';
 				}
 			}
 			res.render('page/posts', {

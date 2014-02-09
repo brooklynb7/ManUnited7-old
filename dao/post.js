@@ -6,15 +6,13 @@ exports.getList = function(callback) {
 		"content": 0,
 		"short_desc": 0
 	}).sort({
-		create_time: -1,
-		_id: -1
+		"create_at": -1
 	}).toArray(callback);
 };
 
 exports.getAll = function(callback){
 	db.post.find().sort({
-		create_time: -1,
-		_id: -1
+		"create_at": -1
 	}).toArray(callback);
 };
 
