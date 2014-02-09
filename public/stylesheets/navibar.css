@@ -1,4 +1,8 @@
 /*Hack dropdown menu -- start*/
+.navbar{
+	border:0;
+	border-radius: 0 !important;
+}
 .navbar-default .navbar-nav>li>a{
 	color: #fff;
 }

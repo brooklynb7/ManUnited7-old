@@ -1,6 +1,7 @@
 var wechat = require('wechat');
 var express = require('express');
 var config = require('../config').config;
+var postDao = require('../dao/post');
 
 module.exports = function(app) {
 	app.use(express.query());
@@ -21,4 +22,8 @@ var is_subscribe_event = function(message) {
 	} else {
 		return false;
 	}
+};
+
+var is_normal_text = function (message) {
+	// body...
 };

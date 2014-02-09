@@ -40,5 +40,6 @@
 	"home": "首页",
 	"pageNotFount": "该页面不存在哦，亲",
 	"short_desc":"概要描述",
-	"restWord":"还能输入%s个字"
+	"restWord":"还能输入%s个字",
+	"news": "资讯"
 }
