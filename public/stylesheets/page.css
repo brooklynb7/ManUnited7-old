@@ -9,6 +9,9 @@ a, a:visited{
 	text-decoration: none;
 	color: #2a6496;
 }
+a.more{
+	color:#bd0006;
+}
 p {
 	margin: 0 0 15px;
 	line-height: 1.6;

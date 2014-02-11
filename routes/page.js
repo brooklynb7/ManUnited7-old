@@ -14,7 +14,7 @@ exports.posts = function(req, res) {
 			for (var i = 0; i < rst.length; i++) {
 				if (rst[i].content.indexOf('<!--more-->') > 0) {
 					rst[i].content = rst[i].content.substring(0, rst[i].content.indexOf('<!--more-->')) +
-						'<p><a href="/post/' + rst[i].slug + '">'+ res.__('more') +'></a></p>';
+						'<p><a href="/post/' + rst[i].slug + '" class="more">'+ res.__('more') +'></a></p>';
 				}
 			}
 			res.render('page/posts', {
