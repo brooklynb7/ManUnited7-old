@@ -55,6 +55,7 @@ exports.config = {
 	title: "ManUnited 7",
 	port: process.env.PORT || 3000,
 	session_secret: process.env.SESSION_SECRET || '',
+	pageSize: 5,
 	timeFormat1: "YYYY/MM/DD HH:mm:ss",
 	weibo: {
 		xmlns_wb: 'xmlns:wb="http://open.weibo.com/wb"',

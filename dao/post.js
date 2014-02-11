@@ -10,10 +10,14 @@ exports.getList = function(callback) {
 	}).toArray(callback);
 };
 
-exports.getAll = function(callback){
+exports.getAll = function(skip, limit, callback){
 	db.post.find().sort({
 		"create_at": -1
-	}).toArray(callback);
+	}).skip(skip).limit(limit).toArray(callback);
+};
+
+exports.countAll = function (callback) {
+	db.post.count(callback);
 };
 
 exports.getBySlug = function(slug, callback) {

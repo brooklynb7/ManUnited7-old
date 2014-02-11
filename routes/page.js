@@ -8,20 +8,41 @@ exports.index = function(req, res) {
 };
 
 exports.posts = function(req, res) {
-	postDao.getAll(function(err, rst) {
+	var currentPage = req.params.page ? req.params.page : 1;
+
+	postDao.countAll(function(err, count) {
 		if (err) util.sendSysError(500, err, res);
 		else {
-			for (var i = 0; i < rst.length; i++) {
-				if (rst[i].content.indexOf('<!--more-->') > 0) {
-					rst[i].content = rst[i].content.substring(0, rst[i].content.indexOf('<!--more-->')) +
-						'<p><a href="/post/' + rst[i].slug + '" class="more">'+ res.__('more') +'></a></p>';
-				}
-			}
-			res.render('page/posts', {
-				posts: rst
-			});
+			getPostList(0, count);
 		}
 	});
+
+	var getPostList = function(start, count) {
+		var start = (currentPage - 1) * config.pageSize;
+		postDao.getAll(start, config.pageSize, function(err, rst) {
+			if (err) util.sendSysError(500, err, res);
+			else {
+				var pages = Math.ceil(count / config.pageSize);
+				for (var i = 0; i < rst.length; i++) {
+					rst[i].content = shortenContent(rst[i].content, rst[i].slug);
+				}
+				res.render('page/posts', {
+					posts: rst,
+					pages: pages,
+					currentPage: currentPage
+				});
+			}
+		});
+	};
+
+	var shortenContent = function (content, slug) {
+		if (content.indexOf('<!--more-->') > 0) {
+			content = content.substring(0, content.indexOf('<!--more-->')) +
+				'<p><a href="/post/' + slug + '" class="more">' + res.__('more') + '></a></p>';
+		}
+
+		return content;
+	};
 };
 
 exports.getPostBySlug = function(req, res) {
