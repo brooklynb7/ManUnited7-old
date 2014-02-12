@@ -22,6 +22,7 @@ p {
 .bold{
 	font-weight: bold;
 }
+
 .header{
 	color: #fff;
 	margin-bottom: 20px;
@@ -124,4 +125,20 @@ div.content{
 	margin-right: 5px;
 	padding-left: 5px;
 	padding-right: 5px;
+}
+.pagination{
+	margin-top: 0px;
+}
+.pagination>.disabled>span, 
+.pagination>.disabled>span:hover, 
+.pagination>.disabled>span:focus, 
+.pagination>.disabled>a, 
+.pagination>.disabled>a:hover, 
+.pagination>.disabled>a:focus{
+	cursor: default;
+	color:#ccc;
+}
+.pagination>li>a, 
+.pagination>li>span{
+	color:#2a6496;
 }

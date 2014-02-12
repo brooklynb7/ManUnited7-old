@@ -23,6 +23,7 @@ exports.doPostNew = function(req, res) {
 			if (rst) {
 				util.sendSysError(500, res.__('slugExsit'), res);
 			} else {
+				post.slug = post.slug.toLowerCase();
 				postDao.insert(post, function(error, rst) {
 					returnNormalServiceResult(res, rst, null);
 				});
