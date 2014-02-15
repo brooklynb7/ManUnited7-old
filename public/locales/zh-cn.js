@@ -42,5 +42,6 @@
 	"short_desc":"概要描述",
 	"restWord":"还能输入%s个字",
 	"news": "资讯",
-	"more": "阅读全文"
+	"more": "阅读全文",
+	"coverImg":"封图"
 }

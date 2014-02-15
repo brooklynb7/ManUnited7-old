@@ -57,6 +57,7 @@ var getPostObject = function(req) {
 		tag: req.body.tag.split('|'),
 		source: req.body.source,
 		originalUrl: req.body.originalUrl,
+		cover_img: req.body.coverImg,
 		visible: parseInt(req.body.visible)
 	};
 };

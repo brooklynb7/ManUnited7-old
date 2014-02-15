@@ -18,9 +18,15 @@
 	<textarea id="editor"></textarea>
 	<input type='hidden' id='content' name='content'  value="<%if(typeof post != "undefined") {%><%= post.content%><%}%>"/>
 </div>
-<div class="form-group ">
-	<label for="tag"><%=__("tag")%>(<%=__("seperateTag")%>)</label>
-	<input type="text" class="form-control input-sm" id="tag" name='tag' placeholder="<%=__("tag")%>" value="<%if(typeof post != "undefined") {%><%= post.tag.join('|')%><%}%>"/>
+<div class="row">
+	<div class="form-group col-xs-6">
+		<label for="tag"><%=__("tag")%>(<%=__("seperateTag")%>)</label>
+		<input type="text" class="form-control input-sm" id="tag" name='tag' placeholder="<%=__("tag")%>" value="<%if(typeof post != "undefined") {%><%= post.tag.join('|')%><%}%>"/>	
+	</div>
+	<div class="form-group col-xs-6">
+		<label for="coverImg"><%=__("coverImg")%></label>
+		<input type="text" class="form-control input-sm" id="coverImg" name='coverImg' placeholder="<%=__("coverImg")%>" value="<%if(typeof post != "undefined") {%><%= post.cover_img %><%}%>"/>	
+	</div>
 </div>
 <div class="row">
 	<div class="form-group col-xs-6">

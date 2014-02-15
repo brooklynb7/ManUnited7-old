@@ -10,19 +10,15 @@
 		"username": "",
 		"password": "",
 		"name": "",
-		"db": ""
+		"db": "myUnited"
 	}
 }
 */
-//mongodb settings for appfog mongodb service END
-
+//mongo troup.mongohq.com:10010/myunited_brooklynb7 -u <user> -p<password>
+//mongo troup.mongohq.com:10046/myUnited -u <user> -p<password>
 var mongo = {
-	"hostname": "",
-	"port": ,
-	"username": "",
-	"password": "",
 	"name": "",
-	"db": ""
+	"db": "myUnited"
 };
 
 var generate_mongo_url = function(obj) {
@@ -35,6 +31,7 @@ var generate_mongo_url = function(obj) {
 		return "mongodb://" + obj.hostname + ":" + obj.port + "/" + obj.db;
 	}
 };
+//mongodb settings for appfog mongodb service END
 
 var mongoskin = require('mongoskin');
 exports.db = mongoskin.db(generate_mongo_url(mongo));
@@ -53,18 +50,21 @@ exports.i18n = i18n;
 
 exports.config = {
 	title: "ManUnited 7",
+	host: "http://www.manunited7.com",
 	port: process.env.PORT || 3000,
-	session_secret: process.env.SESSION_SECRET || '',
+	session_secret: process.env.SESSION_SECRET || 'q3889a5',
 	pageSize: 5,
 	timeFormat1: "YYYY/MM/DD HH:mm:ss",
+	timeFormat2: "YYYY-MM-DD 00:00:00",
 	weibo: {
 		xmlns_wb: 'xmlns:wb="http://open.weibo.com/wb"',
-		app_key: ''
+		app_key: '4016607531'
 	},
 	weixin: {
-		token: '',
+		token: 'manutd7',
 		msg_type:{
 			event:'event',
+			location:'location',
 			text: 'text'
 		},
 		event:{

@@ -76,6 +76,7 @@
 			tag: $.trim($("#tag").val()),
 			originalUrl: $.trim($("#originalUrl").val()),
 			source: $.trim($("#source").val()),
+			coverImg: $.trim($("#coverImg").val()),
 			visible: ($("#visible")[0].checked ? 1 : 0)
 		};
 		if(id) {

@@ -42,5 +42,6 @@
 	"short_desc":"Short description",
 	"restWord":"%s words left",
 	"news": "News",
-	"more": "More"
+	"more": "More",
+	"coverImg":"Cover image"
 }
