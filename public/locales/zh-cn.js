@@ -43,5 +43,6 @@
 	"restWord":"还能输入%s个字",
 	"news": "资讯",
 	"more": "阅读全文",
-	"coverImg":"封图"
+	"coverImg":"封图",
+	"weixinhao":"微信号"
 }

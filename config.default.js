@@ -58,17 +58,24 @@ exports.config = {
 	timeFormat2: "YYYY-MM-DD 00:00:00",
 	weibo: {
 		xmlns_wb: 'xmlns:wb="http://open.weibo.com/wb"',
-		app_key: '4016607531'
+		app_key: ''
 	},
 	weixin: {
-		token: 'manutd7',
-		msg_type:{
-			event:'event',
-			location:'location',
+		token: '',
+		msg_type: {
+			event: 'event',
+			location: 'location',
 			text: 'text'
 		},
-		event:{
-			subscribe:'subscribe'
+		event: {
+			subscribe: 'subscribe'
 		}
+	},
+	twitter: {
+		api_host: "",
+		consumer_key: "",
+		consumer_secret: "",
+		access_token: "",
+		access_token_secret: ""
 	}
 };

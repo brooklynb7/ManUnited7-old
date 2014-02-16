@@ -20,15 +20,14 @@
 				</ul>
 			</li>
 		</ul>
-		<p class="navbar-text navbar-right">
-			<a href="javascript:void(0);" class="i18n en">English</a>
-			<a href="javascript:void(0);" class="i18n zh">中文</a>
-			<% if(locals.session.admin_id) {%>
-				<a href='/admin/profile'><%= locals.session.admin_name%></a>
-				<a href='/admin/logout' class='logout glyphicon glyphicon-off'></a>
+		<ul class="nav navbar-nav navbar-right">
+			<% if(locals.session.user_id) {%>
+				<li><a href='/admin/profile'><%= locals.session.admin_name%></a></li>
+				<li><a href='/admin/logout' class='logout glyphicon glyphicon-off'></a></li>
 			<%} else {%>
-				<a href='/admin/login'><%=__("signIn")%></a>
+				<li><a href='/admin/login'><%=__("signIn")%></a></li>
 			<%}%>
-		</p>
+		</ul>
 	</div>
 </nav>
+<!-- <a href="javascript:void(0);" class="i18n en">English</a><a href="javascript:void(0);" class="i18n zh">中文</a> -->

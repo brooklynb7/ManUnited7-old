@@ -6,11 +6,19 @@ body {
 	background-color: #eee;
 }
 a, a:visited{
-	text-decoration: none;
 	color: #2a6496;
 }
 a.more{
 	color:#bd0006;
+}
+a.clean_link{
+	cursor:default !important;
+	text-decoration:none !important;
+}
+.weixin_logo{
+	width: 128px;
+	height: 128px;
+	margin-bottom: 10px;
 }
 p {
 	margin: 0 0 15px;
@@ -29,15 +37,9 @@ p {
 	background: #bd0006;
 	box-shadow: 0 3px 10px #ccc;
 }
-.header.navbar-default .navbar-text,
-.header.navbar-default .navbar-text a{
-	color: #fff;
-}
+
 .header .navbar-collapse{
 	padding-left: 30px;
-}
-.header .navbar-right a{
-	margin-right: 10px;
 }
 a.logo, a:hover.logo{
 	float: left;

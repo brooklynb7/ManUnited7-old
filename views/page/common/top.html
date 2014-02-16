@@ -27,17 +27,22 @@ ga('send', 'pageview');
 	<div class="collapse navbar-collapse" id="navBar">
 		<ul class="nav navbar-nav">
 			<li><a href="/posts"><%=__("news")%></a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=__('weixinhao')%><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="javascript:void(0);" class='clean_link'>ManUnited7</li>
+					<li><a href="javascript:void(0);" class='clean_link'><img src='/resources/images/getqrcode.jpg' class='weixin_logo'/></a></li>
+				</ul>
+			</li>
 		</ul>
-		<p class="navbar-text navbar-right">
-			<a href="javascript:void(0);" class="i18n en">English</a>
-			<a href="javascript:void(0);" class="i18n zh">中文</a>
+		<ul class="nav navbar-nav navbar-right">
 			<% if(locals.session.user_id) {%>
-				<a href='/profile'><%= locals.session.user_name%></a>
-				<a href='/logout' class='logout glyphicon glyphicon-off'></a>
+				<li><a href='/profile'><%= locals.session.user_name%></a></li>
+				<li><a href='/logout' class='logout glyphicon glyphicon-off'></a></li>
 			<%} else {%>
-				<a href='/login'><%=__("signIn")%></a>
-				<!-- <wb:login-button type="4,2" onlogin="login" onlogout="logout"><%=__("signIn")%></wb:login-button> -->
+				<li><a href='/login'><%=__("signIn")%></a></li>
 			<%}%>
-		</p>
+		</ul>
 	</div>
 </nav>
+<!-- <a href="javascript:void(0);" class="i18n en">English</a><a href="javascript:void(0);" class="i18n zh">中文</a> -->

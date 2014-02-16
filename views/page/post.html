@@ -6,18 +6,29 @@
 	<body>
 		<%- include common/top.html %>
 		<div class='content'>
-			<!-- <ol class="breadcrumb">
-				<li><a href="/"><%=__('home')%></a></li>
-				<li><a href="/posts"><%=__('articleList')%></a></li>
-				<li class="active"><%=post.title%></li>
-			</ol> -->
 			<div class="post-block panel panel-default">
 				<div class="panel-body">
 					<h3><%=post.title%></h3>
 					<h6><%=moment(post.create_at).format(timeFormat1)%></h6>
-					<div class='post-content'><%-post.content%></div>
+					<!-- JiaThis Button BEGIN -->
+					<div class="jiathis_style_24x24" style="padding-bottom:30px">
+						<a class="jiathis_button_tsina"></a>
+						<a class="jiathis_button_weixin"></a>
+						<a class="jiathis_button_douban"></a>
+						<a class="jiathis_button_renren"></a>
+						<a class="jiathis_button_tqq"></a>
+						<a class="jiathis_button_fb"></a>
+						<a class="jiathis_button_twitter"></a>
+						<a class="jiathis_button_googleplus"></a>
+					</div>
+					<!-- JiaThis Button END -->
+					<div class='post-content clearfix'><%-post.content%></div>
 				</div>
 			</div>
-		</div>
+		</div>		
+		<script type="text/javascript">
+			var jiathis_config = {data_track_clickback:'true'};
+		</script>
+		<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1344332343487662" charset="utf-8"></script>
 	</body>
 </html>

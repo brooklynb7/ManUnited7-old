@@ -3,6 +3,7 @@ var user = require('./routes/user');
 var api = require('./routes/api');
 var admin = require('./routes/admin');
 var user = require('./routes/user');
+var twitter = require('./routes/twitter');
 var weixin = require('./routes/weixin');
 
 module.exports = function(app) {
@@ -28,6 +29,13 @@ module.exports = function(app) {
 	app.post('/api/post/new', admin.auth_admin, api.doPostNew);
 	app.post('/api/post/edit', admin.auth_admin, api.doPostEdit);
 	app.post('/api/post/del', admin.auth_admin, api.doPostDel);
+
+	/*weibo*/
+
+	/*twitter*/
+	//app.get('/api/twitter/access', admin.auth_admin, twitter.access);
+	app.get('/api/twitter/lists/:name/timeline', admin.auth_admin, twitter.showListTimeline);
+
 	weixin(app);
 
 	app.get('*', page.notFound);	

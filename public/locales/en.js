@@ -43,5 +43,6 @@
 	"restWord":"%s words left",
 	"news": "News",
 	"more": "More",
-	"coverImg":"Cover image"
+	"coverImg":"Cover image",
+	"weixinhao":"WeChat"
 }
