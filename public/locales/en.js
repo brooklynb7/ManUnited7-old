@@ -42,7 +42,8 @@
 	"short_desc":"Short description",
 	"restWord":"%s words left",
 	"news": "News",
-	"more": "More",
+	"whatTheySay":"What they say",
+	"more": "Read more",
 	"coverImg":"Cover image",
 	"weixinhao":"WeChat"
 }

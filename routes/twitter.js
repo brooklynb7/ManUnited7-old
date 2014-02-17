@@ -15,6 +15,14 @@ var getListTimeLineUrl = function(name) {
 	return '/lists/statuses.json?slug=' + name + '&owner_screen_name=brooklynb7_';
 };
 
+exports.says = function(req, res) {
+	request.get(generateOAuthRequestOption(getListTimeLineUrl('unitedMembers'), req), function(e, r, body) {
+		res.render("page/says", {
+			sayList: JSON.parse(body)
+		});
+	});
+};
+
 exports.showListTimeline = function(req, res) {
 	request.get(generateOAuthRequestOption(getListTimeLineUrl(req.params.name), req), function(e, r, body) {
 		//res.render("api_demo/get_profile", {result:JSON.parse(body)});

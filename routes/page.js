@@ -38,7 +38,7 @@ exports.posts = function(req, res) {
 	var shortenContent = function (content, slug) {
 		if (content.indexOf('<!--more-->') > 0) {
 			content = content.substring(0, content.indexOf('<!--more-->')) +
-				'<p><a href="/post/' + slug + '" class="more">' + res.__('more') + '></a></p>';
+				'<p>......</p><p><a href="/post/' + slug + '" class="more">' + res.__('more') + '></a></p>';
 		}
 
 		return content;
@@ -55,7 +55,6 @@ exports.getPostBySlug = function(req, res) {
 		}
 	});
 };
-
 
 // URL: /404
 exports.notFound = function(req, res) {
