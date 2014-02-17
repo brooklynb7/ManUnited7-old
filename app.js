@@ -27,8 +27,8 @@ app.use(express.methodOverride());
 app.use(express.cookieParser());
 app.use(express.session({
 	secret: config.session_secret,
-	maxAge  : new Date(Date.now() + 7200000), //1 Hour
-    expires : new Date(Date.now() + 7200000), //1 Hour
+	maxAge  : new Date(Date.now() + 60 * 60000), //1 Hour
+    expires : 60 * 60000 //1 Hour
 }));
 
 app.use(flash());
