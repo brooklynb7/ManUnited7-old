@@ -38,7 +38,7 @@ var generateOAuthRequestOption = function(api_url, req) {
 	return requestOption;
 };
 
-var test_data = [{
+/*var test_data = [{
 	"created_at": "Sun Feb 16 08:33:10 +0000 2014",
 	"id": 434968683715125250,
 	"id_str": "434968683715125248",
@@ -329,4 +329,4 @@ var test_data = [{
 	"favorited": false,
 	"retweeted": false,
 	"lang": "en"
-}];
+}];*/

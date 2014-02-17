@@ -1,22 +1,10 @@
-//mongodb settings for appfog mongodb service START
-//如果使用 Appfog 自带的 MongoDB服务，请使用以下配置
-/*if (process.env.VCAP_SERVICES) {
-	var env = JSON.parse(process.env.VCAP_SERVICES);
-	var mongo = env['mongodb-1.8'][0]['credentials'];
-} else {
-	var mongo = {
-		"hostname": "localhost",
-		"port": 27017,
-		"username": "",
-		"password": "",
-		"name": "",
-		"db": "myUnited"
-	}
-}
-*/
 //mongo troup.mongohq.com:10010/myunited_brooklynb7 -u <user> -p<password>
 //mongo troup.mongohq.com:10046/myUnited -u <user> -p<password>
 var mongo = {
+	"hostname": "",
+	"port": "",
+	"username": "",
+	"password": "",
 	"name": "",
 	"db": "myUnited"
 };
@@ -56,6 +44,8 @@ exports.config = {
 	pageSize: 5,
 	timeFormat1: "YYYY/MM/DD HH:mm:ss",
 	timeFormat2: "YYYY-MM-DD 00:00:00",
+	needProxy: true,
+	proxyUrl: 'http://proxy.pvgl.sap.corp:8080',
 	weibo: {
 		xmlns_wb: 'xmlns:wb="http://open.weibo.com/wb"',
 		app_key: ''

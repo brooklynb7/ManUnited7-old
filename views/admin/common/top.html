@@ -21,7 +21,7 @@
 			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<% if(locals.session.user_id) {%>
+			<% if(locals.session.admin_id) {%>
 				<li><a href='/admin/profile'><%= locals.session.admin_name%></a></li>
 				<li><a href='/admin/logout' class='logout glyphicon glyphicon-off'></a></li>
 			<%} else {%>

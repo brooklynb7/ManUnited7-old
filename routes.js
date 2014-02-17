@@ -34,7 +34,7 @@ module.exports = function(app) {
 
 	/*twitter*/
 	//app.get('/api/twitter/access', admin.auth_admin, twitter.access);
-	app.get('/api/twitter/lists/:name/timeline', admin.auth_admin, twitter.showListTimeline);
+	app.get('/api/twitter/lists/:name/timeline', twitter.showListTimeline);
 
 	weixin(app);
 
