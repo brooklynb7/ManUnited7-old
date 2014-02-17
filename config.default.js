@@ -45,7 +45,7 @@ exports.config = {
 	timeFormat1: "YYYY/MM/DD HH:mm:ss",
 	timeFormat2: "YYYY-MM-DD 00:00:00",
 	needProxy: true,
-	proxyUrl: 'http://proxy.pvgl.sap.corp:8080',
+	proxyUrl: '',
 	weibo: {
 		xmlns_wb: 'xmlns:wb="http://open.weibo.com/wb"',
 		app_key: ''

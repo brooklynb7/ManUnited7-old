@@ -21,6 +21,9 @@ exports.says = function(req, res) {
 			sayList: JSON.parse(body)
 		});
 	});
+	/*res.render("page/says", {
+		sayList: test_twitter_data
+	});*/
 };
 
 exports.showListTimeline = function(req, res) {
@@ -46,7 +49,7 @@ var generateOAuthRequestOption = function(api_url, req) {
 	return requestOption;
 };
 
-/*var test_data = [{
+var test_twitter_data = [{
 	"created_at": "Sun Feb 16 08:33:10 +0000 2014",
 	"id": 434968683715125250,
 	"id_str": "434968683715125248",
@@ -337,4 +340,4 @@ var generateOAuthRequestOption = function(api_url, req) {
 	"favorited": false,
 	"retweeted": false,
 	"lang": "en"
-}];*/
+}];

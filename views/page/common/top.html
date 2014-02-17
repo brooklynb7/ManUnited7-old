@@ -27,7 +27,7 @@ ga('send', 'pageview');
 	<div class="collapse navbar-collapse" id="navBar">
 		<ul class="nav navbar-nav">
 			<li><a href="/posts"><%=__("news")%></a></li>
-			<li><a href="/says"><%=__("whatTheySay")%></a></li>
+			<!-- <li><a href="/says"><%=__("whatTheySay")%></a></li> -->
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=__('weixinhao')%><b class="caret"></b></a>
 				<ul class="dropdown-menu">
@@ -37,6 +37,8 @@ ga('send', 'pageview');
 			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
+			<li><a href="javascript:void(0);" class="i18n en">English</a></li>
+			<li><a href="javascript:void(0);" class="i18n zh">中文</a></li>
 			<% if(locals.session.user_id) {%>
 				<li><a href='/profile'><%= locals.session.user_name%></a></li>
 				<li><a href='/logout' class='logout glyphicon glyphicon-off'></a></li>
