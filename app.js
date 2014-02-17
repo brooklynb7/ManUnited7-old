@@ -12,7 +12,7 @@ var flash = require('connect-flash');
 
 var app = express();
 var view_path = __dirname + '/views';
-var favicon_path = __dirname + '/public/images/ico/united_32X32.ico';
+var favicon_path = __dirname + '/public/images/ico/united.png';
 var static_path = __dirname + '/public';
 
 // all environments
