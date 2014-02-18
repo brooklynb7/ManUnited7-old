@@ -56,6 +56,10 @@ exports.getPostBySlug = function(req, res) {
 	});
 };
 
+exports.timeline = function(req,res){
+	res.render('page/timeline',{});
+};
+
 // URL: /404
 exports.notFound = function(req, res) {
 	res.render('page/404', {

@@ -41,6 +41,14 @@ p {
 .header .navbar-collapse{
 	padding-left: 30px;
 }
+img.logo{
+	width: 42px;
+	height: 42px;
+	margin-left: 10px;
+	margin-top: 4px;
+	display: inline-block;
+	float: left;
+}
 a.logo, a:hover.logo{
 	float: left;
 	padding: 14px 12px 10px 12px;

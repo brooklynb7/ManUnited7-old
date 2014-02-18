@@ -11,6 +11,7 @@ module.exports = function(app) {
 	app.get('/posts/:page?', page.posts);
 	app.get('/post/:slug', page.getPostBySlug);
 	app.get('/says', twitter.says);
+	app.get('/timeline', page.timeline);
 	//app.get('/profile', user.auth_user, page.profile);
 
 	/*admin*/
