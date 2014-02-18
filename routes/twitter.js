@@ -26,6 +26,17 @@ exports.says = function(req, res) {
 	});*/
 };
 
+exports.saysForAdmin = function(req, res) {
+	request.get(generateOAuthRequestOption(getListTimeLineUrl('unitedMembers'), req), function(e, r, body) {
+		res.render("admin/says", {
+			sayList: JSON.parse(body)
+		});
+	});
+	/*res.render("page/says", {
+		sayList: test_twitter_data
+	});*/
+};
+
 exports.showListTimeline = function(req, res) {
 	request.get(generateOAuthRequestOption(getListTimeLineUrl(req.params.name), req), function(e, r, body) {
 		//res.render("api_demo/get_profile", {result:JSON.parse(body)});

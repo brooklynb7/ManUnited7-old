@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include common/head.html %>
+	</head>
+	<body>
+		<%- include common/top.html %>
+		<div class='container'>
+			<% sayList.forEach(function(item){ %> 
+				<div style='margin-bottom:10px;' class='clearfix'>
+					<div class='pull-left col-xs-2 col-sm-1'>
+						<img class='img-rounded' style='margin-top:2px;' src="<%= item.user.profile_image_url%>"  />
+					</div>
+					
+					<div class='pull-left col-xs-10 col-sm-11' style='min-height:50px;'>
+						<div><%= item.user.name%></div>
+						<p style='white-space: pre-wrap;word-wrap: break-word;'><%= item.text%></p>
+					</div>
+				</div>
+			<% }) %>			
+		</div>
+		<script type="text/javascript">
+			console.log(<%- JSON.stringify(sayList) %>);
+		</script>
+	</body>
+</html>

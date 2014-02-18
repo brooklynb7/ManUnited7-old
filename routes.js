@@ -26,6 +26,7 @@ module.exports = function(app) {
 	app.get('/admin/post', admin.auth_admin, admin.postList);
 	app.get('/admin/post/new', admin.auth_admin, admin.postNew);
 	app.get('/admin/post/edit/:id', admin.auth_admin, admin.postEdit);
+	app.get('/admin/says', admin.auth_admin, twitter.saysForAdmin);
 
 	/*api*/
 	app.post('/api/post/new', admin.auth_admin, api.doPostNew);
@@ -35,7 +36,6 @@ module.exports = function(app) {
 	/*weibo*/
 
 	/*twitter*/
-	//app.get('/api/twitter/access', admin.auth_admin, twitter.access);
 	app.get('/api/twitter/lists/:name/timeline', twitter.showListTimeline);
 
 	weixin(app);
