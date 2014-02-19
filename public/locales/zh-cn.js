@@ -45,5 +45,7 @@
 	"whatTheySay":"他们说",
 	"more": "阅读全文",
 	"coverImg":"封图",
-	"weixinhao":"微信号"
+	"weixinhao":"微信号",
+	"thisIsManUnited":"这就是曼联",
+	"sortByYear":"按年排序"
 }

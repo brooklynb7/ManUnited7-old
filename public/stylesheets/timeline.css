@@ -125,7 +125,7 @@
 }
 
 .timeline-badge.danger {
-	background-color: #d9534f !important;
+	background-color: #bd0006 !important;
 }
 
 .timeline-badge.info {
@@ -135,6 +135,7 @@
 .timeline-title {
 	margin-top: 0;
 	color: inherit;
+	font-weight: bold;
 }
 
 .timeline-body > p,
@@ -144,6 +145,10 @@
 
 .timeline-body > p + p {
 	margin-top: 5px;
+}
+.sort_timeline .glyphicon{
+	font-size:9px;
+	margin-left:5px;
 }
 
 @media (max-width: 767px) {

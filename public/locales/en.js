@@ -45,5 +45,7 @@
 	"whatTheySay":"What they say",
 	"more": "Read more",
 	"coverImg":"Cover image",
-	"weixinhao":"WeChat"
+	"weixinhao":"WeChat",
+	"thisIsManUnited":"This is Manchester United",
+	"sortByYear":"sort by year"
 }

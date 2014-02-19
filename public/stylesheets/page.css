@@ -5,6 +5,9 @@ body {
 	font-family:"Microsoft Yahei", "Trebuchet MS", Georgia,"Times New Roman",Times,sans-serif;
 	background-color: #eee;
 }
+.united_red{
+	color: #bd0006 !important;
+}
 a, a:visited{
 	color: #2a6496;
 }
@@ -19,6 +22,9 @@ a.clean_link{
 	width: 128px;
 	height: 128px;
 	margin-bottom: 10px;
+}
+.img_100{
+	max-width: 100%;
 }
 p {
 	margin: 0 0 15px;
@@ -110,13 +116,16 @@ label{
 	margin: 0px;
 	padding: 0px;
 }
-
-.post-block .panel-body{
-	padding: 10px 20px 15px;
+.page-header{
+	margin-top: 20px;
+}
+.panel-body{
+	padding: 15px 30px;
 }
 .post-block .panel-body h3{
 	color: #bd0006;
 	margin-top: 10px;
+	line-height: 1.5;
 }
 .post-block .panel-body h6{
 	margin-top: 15px;
