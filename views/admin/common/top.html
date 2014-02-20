@@ -1,4 +1,4 @@
-<nav class="header navbar navbar-default" role="navigation">
+<div class="header navbar navbar-default" role="navigation">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
 			<span class="sr-only">Toggle navigation</span>
@@ -14,15 +14,18 @@
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					<%=__("article")%><b class="caret"></b>
-				</a>
+				</a>				
 				<ul class="dropdown-menu">
-					<li><a href="/admin/post"><%=__("articleList")%></a></li>
+					<li><a href="/admin/posts"><%=__("articleList")%></a></li>
 					<li><a href="/admin/post/new"><%=__("newArticle")%></a></li>
 				</ul>
 			</li>
+			<li><a href="/admin/timeline"><%=__("timeline")%></a></li>
 			<li><a href="/admin/says"><%=__("whatTheySay")%></a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
+			<li><a href="javascript:void(0);" class="i18n en">English</a></li>
+			<li><a href="javascript:void(0);" class="i18n zh">中文</a></li>
 			<% if(locals.session.admin_id) {%>
 				<li><a href='/admin/profile'><%= locals.session.admin_name%></a></li>
 				<li><a href='/admin/logout' class='logout glyphicon glyphicon-off'></a></li>
@@ -31,5 +34,4 @@
 			<%}%>
 		</ul>
 	</div>
-</nav>
-<!-- <a href="javascript:void(0);" class="i18n en">English</a><a href="javascript:void(0);" class="i18n zh">中文</a> -->
+</div>

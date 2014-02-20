@@ -3,6 +3,7 @@ var postDao = require('../dao/post');
 var util = require('../util');
 var moment = require('moment');
 var config = require('../config').config;
+var fs = require("fs");
 
 var url_admin = '/admin';
 var url_admin_login = '/admin/login';
@@ -16,6 +17,7 @@ var view_admin_profile = 'admin/profile';
 var view_admin_post_list = 'admin/postList';
 var view_admin_post_new = 'admin/postNew';
 var view_admin_post_edit = 'admin/postEdit';
+var view_admin_timeline = 'admin/timeline';
 
 exports.auth_admin = function(req, res, next) {
 	if (req.session.admin_id) {
@@ -148,13 +150,20 @@ exports.postNew = function(req, res) {
 	res.render(view_admin_post_new, {});
 };
 
-exports.postEdit = function(req, res){
-	postDao.findById(req.params.id, function(err, rst){
-		if(err) util.sendSysError(500, err, res);
+exports.postEdit = function(req, res) {
+	postDao.findById(req.params.id, function(err, rst) {
+		if (err) util.sendSysError(500, err, res);
 		else {
 			res.render(view_admin_post_edit, {
 				post: rst
 			});
 		}
+	});
+};
+
+exports.timeline = function(req, res) {
+	var timeline_data = fs.readFileSync("./data/timeline.js", "utf-8");
+	res.render(view_admin_timeline, {
+		timeline_list: timeline_data
 	});
 };

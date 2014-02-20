@@ -47,5 +47,6 @@
 	"coverImg":"封图",
 	"weixinhao":"微信号",
 	"thisIsManUnited":"这就是曼联",
-	"sortByYear":"按年排序"
+	"sortByYear":"按年排序",
+	"timeline":"时间线"
 }

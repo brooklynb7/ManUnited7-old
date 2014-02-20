@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html <%- include common/xmlns_wb.html %>>
+<html>
 	<head>
 		<%- include common/head.html %>
 	</head>
 	<body>
 		<%- include common/top.html %>
 		<div class='container'>
-			404
+			
 		</div>
 		<%- include ../common/footer.html%>
+		<script type="text/javascript">
+			console.log(JSON.parse(<%- JSON.stringify(timeline_list) %>));
+		</script>
 	</body>
 </html>

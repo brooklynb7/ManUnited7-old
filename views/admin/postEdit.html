@@ -14,7 +14,7 @@
 				<div class="panel-heading">
 					<ol class="breadcrumb">
 						<li><a href="/admin"><%= __("home")%></a></li>
-						<li><a href="/admin/post"><%= __("articleList")%></a></li>
+						<li><a href="/admin/posts"><%= __("articleList")%></a></li>
 						<li class="active"><%= __("editArticle") %></li>
 						<a href='/admin/post/new' class='btn btn-xs btn-red pull-right'><%=__("newArticle")%></a>
 					</ol>
@@ -31,6 +31,7 @@
 				</div>
 			</div>
 		</div>
+		<%- include ../common/footer.html%>
 		<script type="text/javascript" src='/resources/javascripts/admin/postNewEdit.js'></script>
 	</body>
 </html>

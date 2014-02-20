@@ -27,8 +27,9 @@ app.use(express.methodOverride());
 app.use(express.cookieParser());
 app.use(express.session({
 	secret: config.session_secret,
-	maxAge  : new Date(Date.now() + 60 * 60000), //1 Hour
-    expires : 60 * 60000 //1 Hour
+	cookie: {
+		maxAge: 60 * 60000
+	}
 }));
 
 app.use(flash());
@@ -45,7 +46,7 @@ app.use(function(req, res, next) {
 	next();
 });
 
-app.use(express.favicon(favicon_path));
+//app.use(express.favicon(favicon_path));
 app.use('/resources', express.static(static_path));
 
 //app.set("env","production");

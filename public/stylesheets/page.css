@@ -122,34 +122,10 @@ label{
 .panel-body{
 	padding: 15px 30px;
 }
-.post-block .panel-body h3{
-	color: #bd0006;
-	margin-top: 10px;
-	line-height: 1.5;
-}
-.post-block .panel-body h6{
-	margin-top: 15px;
-	color: #999;
-}
+
 .list-group-item.row{
 	margin-left: 5px;
 	margin-right: 5px;
 	padding-left: 5px;
 	padding-right: 5px;
-}
-.pagination{
-	margin-top: 0px;
-}
-.pagination>.disabled>span, 
-.pagination>.disabled>span:hover, 
-.pagination>.disabled>span:focus, 
-.pagination>.disabled>a, 
-.pagination>.disabled>a:hover, 
-.pagination>.disabled>a:focus{
-	cursor: default;
-	color:#ccc;
-}
-.pagination>li>a, 
-.pagination>li>span{
-	color:#2a6496;
 }

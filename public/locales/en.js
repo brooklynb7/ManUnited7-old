@@ -47,5 +47,6 @@
 	"coverImg":"Cover image",
 	"weixinhao":"WeChat",
 	"thisIsManUnited":"This is Manchester United",
-	"sortByYear":"sort by year"
+	"sortByYear":"sort by year",
+	"timeline":"Timeline"
 }

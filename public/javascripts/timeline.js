@@ -96,6 +96,8 @@
 			'body_html': 'In 1878 the Lancashire and Yorkshire Railway Company granted permission for the employees of its Carriage and Wagon department to start a football team, which was subsequently named Newton Heath LYR. LYR stood for "Lancashire &amp; Yorkshire Railway" and was used to distinguish the team from their colleagues from the Motive Power Division, who were known as Newton Heath Loco.The team was funded by the railway company, who paid the lease on its first home ground, a field close to the railway yard on North Road. It is said that the players were "tough, diligent men who formed a powerful side"; they initially played games against other teams of railway workers, very few of which were recorded.'
 		}, {
 			'year': 1882,
+			'title':'',
+			'sub_title':'',
 			'body_html': 'During the 1882–83 season, the team played a total of 26 recorded friendly matches, and the following season competed in the Lancashire Cup but lost 7–2 in the first round to the reserve team of Blackburn Olympic.'
 		}, {
 			'year': 1884,
@@ -125,6 +127,5 @@
 			'title': 'The 1892-93 Newton Heath team',
 			'body_html': '<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Newton_Heath_1892-93.jpg/640px-Newton_Heath_1892-93.jpg" class="img-rounded img_100" />'
 		}
-
 	];
 })(jQuery);

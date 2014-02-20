@@ -1,8 +1,6 @@
 var page = require('./routes/page');
-var user = require('./routes/user');
 var api = require('./routes/api');
 var admin = require('./routes/admin');
-var user = require('./routes/user');
 var twitter = require('./routes/twitter');
 var weixin = require('./routes/weixin');
 
@@ -23,10 +21,11 @@ module.exports = function(app) {
 	app.post('/admin/install', admin.doInstall);
 	app.get('/admin/profile', admin.auth_admin, admin.profile);
 	app.post('/admin/changePwd', admin.auth_admin, admin.doChangePwd);
-	app.get('/admin/post', admin.auth_admin, admin.postList);
+	app.get('/admin/posts', admin.auth_admin, admin.postList);
 	app.get('/admin/post/new', admin.auth_admin, admin.postNew);
 	app.get('/admin/post/edit/:id', admin.auth_admin, admin.postEdit);
 	app.get('/admin/says', admin.auth_admin, twitter.saysForAdmin);
+	app.get('/admin/timeline', admin.auth_admin, admin.timeline);
 
 	/*api*/
 	app.post('/api/post/new', admin.auth_admin, api.doPostNew);

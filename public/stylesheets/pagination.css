@@ -1,0 +1,16 @@
+.pagination{
+	margin-top: 0px;
+}
+.pagination>.disabled>span, 
+.pagination>.disabled>span:hover, 
+.pagination>.disabled>span:focus, 
+.pagination>.disabled>a, 
+.pagination>.disabled>a:hover, 
+.pagination>.disabled>a:focus{
+	cursor: default;
+	color:#ccc;
+}
+.pagination>li>a, 
+.pagination>li>span{
+	color:#2a6496;
+}
