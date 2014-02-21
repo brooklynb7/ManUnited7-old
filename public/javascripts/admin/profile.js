@@ -1,4 +1,4 @@
-(function() {
+(function($) {
 	$(document).ready(function() {
 		$('#currentPwd, #newPwd, #confirmPwd').placeholder();
 
@@ -23,4 +23,4 @@
 		$(".successMsg").html("");
 		$(".errorMsg").html(errMsg).show();
 	};
-})();
+})(jQuery);

@@ -1,4 +1,4 @@
-(function() {
+(function($) {
 	$(document).ready(function() {
 		$(".removePost").on('click', function() {
 			var $this = $(this);
@@ -27,4 +27,4 @@
 
 		});
 	});
-})();
+})(jQuery);

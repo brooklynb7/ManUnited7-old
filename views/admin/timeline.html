@@ -6,11 +6,23 @@
 	<body>
 		<%- include common/top.html %>
 		<div class='container'>
-			
+			<div class="panel panel-default">
+				<div class="panel-heading"><%=__('edit')%><%=__('timeline')%></div>
+				<div class="panel-body" style='padding:15px;'>
+					<div class='list-group'>
+						<div class="list-group-item row">
+							<div>
+								<input class="form-control input-sm" type="text" placeholder="Year" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<%- include ../common/footer.html%>
 		<script type="text/javascript">
-			console.log(JSON.parse(<%- JSON.stringify(timeline_list) %>));
+			var timeline_data = JSON.parse(<%- JSON.stringify(timeline_list) %>);
 		</script>
+		<script type="text/javascript" src='/resources/javascripts/admin/timeline.js'></script>
 	</body>
 </html>

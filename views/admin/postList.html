@@ -21,7 +21,6 @@
 							<a href='/admin/post/edit/<%=item._id%>' class='col-md-9 col-sm-8 col-xs-7'><%=item.title%></a>
 							<div class='col-md-3 col-sm-4 col-xs-5'><a href='javascript:void(0)' class='pull-right removePost glyphicon glyphicon-remove' post-id='<%=item._id%>' post-title='<%=item.title%>'></a>
 							<span class='pull-right'><%=moment(item.create_at).format(timeFormat1)%></span></div>
-							
 						</div>
 					<% }) %>
 					</div>

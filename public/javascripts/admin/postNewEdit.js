@@ -1,4 +1,4 @@
-(function() {
+(function($) {
 	$(document).ready(function() {
 		$('#title, #slug, #tag, #originalUrl, #source').placeholder();
 
@@ -106,4 +106,4 @@
 	var showErrorMsg = function(errMsg) {
 		$(".errorMsg").html(errMsg).show();
 	};
-})();
+})(jQuery);

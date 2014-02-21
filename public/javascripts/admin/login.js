@@ -1,4 +1,4 @@
-(function() {
+(function($) {
 	$(document).ready(function() {
 		$('#userNameInput, #pwdInput').placeholder();
 
@@ -18,4 +18,4 @@
 	var showErrorMsg = function(){
 		$(".errorMsg").html($.i18n._("fillAllFields")).show();
 	};
-})();
+})(jQuery);
