@@ -1,7 +1,7 @@
 (function() {
 	var _confirmModalHtml = function(options) {
 		options = options || {};
-		var $modal = $("<div class='modal fade' />");
+		var $modal = $("<div class='modal fade' tabindex='-1' />");
 		var $modal_dialog = $("<div class='modal-dialog' />");
 		var $modal_content = $("<div class='modal-content' />");
 

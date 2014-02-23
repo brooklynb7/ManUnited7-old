@@ -21,7 +21,7 @@
 	"newArticle": "新建文章",
 	"editArticle": "编辑文章",
 	"delArticle": "删除文章",
-	"whetherDelArticle": "您确定要删除这篇文章吗？",
+	"whetherDelArticle": "您确定要删除这篇文章吗?",
 	"title": "标题",
 	"tag": "标签",
 	"seperateTag": "用\"|\"分割每一个标签",
@@ -48,5 +48,7 @@
 	"weixinhao":"微信号",
 	"thisIsManUnited":"这就是曼联",
 	"sortByYear":"按年排序",
-	"timeline":"时间线"
+	"timeline":"时间线",
+	"delTimeline":"删除时间线",
+	"whetherDelTimeline":"您确定要删除这条时间线吗?"
 }

@@ -129,3 +129,22 @@ label{
 	padding-left: 5px;
 	padding-right: 5px;
 }
+.timeline .list-group-item{	
+	margin-bottom: 15px;
+}
+.timeline .list-group-item .row{	
+	margin-left: 0px;
+	margin-right: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.timeline .list-group-item a.glyphicon{
+	position: absolute;
+	right: 5px;
+}
+.timeline .list-group-item a.glyphicon.glyphicon-plus{
+	top: 105px;
+}
+.timeline .list-group-item .row.content{
+	margin-top:5px;
+}

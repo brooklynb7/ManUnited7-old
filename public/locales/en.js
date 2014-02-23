@@ -48,5 +48,7 @@
 	"weixinhao":"WeChat",
 	"thisIsManUnited":"This is Manchester United",
 	"sortByYear":"sort by year",
-	"timeline":"Timeline"
+	"timeline":"Timeline",
+	"delTimeline":"Delete timeline",
+	"whetherDelTimeline":"Are you sure to delete this timeline?"
 }
