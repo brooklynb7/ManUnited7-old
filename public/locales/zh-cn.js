@@ -5,6 +5,7 @@
 	"userName": "用户名",
 	"password": "密码",
 	"signIn": "登录",
+	"save":"保存",
 	"fillAllFields": "请填写完整",
 	"wrongUserPassword": "用户名/密码 不正确",
 	"initializeSystem": "系统初始化",

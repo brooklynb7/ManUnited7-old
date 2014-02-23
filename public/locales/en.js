@@ -5,6 +5,7 @@
 	"userName":"User name",
 	"password":"Password",
 	"signIn":"Sign in",
+	"save":"Save",
 	"fillAllFields":"Please fill all the fields",
 	"wrongUserPassword": "Wrong user/password",
 	"initializeSystem":"Initialize System",

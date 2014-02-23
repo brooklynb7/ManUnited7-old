@@ -3,6 +3,10 @@
 		$.each(timeline_data, function() {
 			$('.timeline').append(createTimelineRow(this));
 		});
+
+		$(window).bind('beforeunload', function(e) {
+			return 's';
+		});
 	});
 
 	var createTimelineRow = function(data) {

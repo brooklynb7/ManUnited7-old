@@ -7,13 +7,16 @@
 		<%- include common/top.html %>
 		<div class='container'>
 			<div class="panel panel-default">
-				<div class="panel-heading"><%=__('edit')%> <%=__('timeline')%></div>
+				<div class="panel-heading">
+					<%=__('edit')%> <%=__('timeline')%>
+					<button type="button" class="btn btn-red btn-xs pull-right"><%=__("save")%></button>
+				</div>
 				<div class="panel-body" style='padding:15px;'>
 					<div class='list-group timeline'>
 					</div>
 				</div>
 				<div class="panel-footer">
-					<button></button>
+					&nbsp;<button type="button" class="btn btn-red btn-xs pull-right"><%=__("save")%></button>
 				</div>
 			</div>
 		</div>
