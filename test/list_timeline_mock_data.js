@@ -2261,4 +2261,4 @@
 	"retweeted": false,
 	"possibly_sensitive": false,
 	"lang": "pt"
-}] a
+}]
