@@ -26,5 +26,7 @@
 			});
 			window.location.reload();
 		});
+
+		$(".container").css('min-height',$(window).height() - 120);
 	});
 })(jQuery);

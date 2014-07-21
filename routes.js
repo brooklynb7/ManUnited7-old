@@ -5,11 +5,11 @@ var twitter = require('./routes/twitter');
 var weixin = require('./routes/weixin');
 
 module.exports = function(app) {
-	app.get('/', page.index);
+	//app.get('/', page.index);
 	app.get('/posts/:page?', page.posts);
 	app.get('/post/:slug', page.getPostBySlug);
-	app.get('/says', twitter.says);
-	app.get('/timeline', page.timeline);
+	app.get('/', twitter.says);
+	//app.get('/timeline', page.timeline);
 	//app.get('/profile', user.auth_user, page.profile);
 
 	/*admin*/
@@ -25,7 +25,7 @@ module.exports = function(app) {
 	app.get('/admin/post/new', admin.auth_admin, admin.postNew);
 	app.get('/admin/post/edit/:id', admin.auth_admin, admin.postEdit);
 	app.get('/admin/says', admin.auth_admin, twitter.saysForAdmin);
-	app.get('/admin/timeline', admin.auth_admin, admin.timeline);
+	//app.get('/admin/timeline', admin.auth_admin, admin.timeline);
 
 	/*api*/
 	app.post('/api/post/new', admin.auth_admin, api.doPostNew);
@@ -35,7 +35,7 @@ module.exports = function(app) {
 	/*weibo*/
 
 	/*twitter*/
-	app.get('/api/twitter/lists/:name/timeline', twitter.showListTimeline);
+	//app.get('/api/twitter/lists/:name/timeline', twitter.showListTimeline);
 
 	weixin(app);
 
