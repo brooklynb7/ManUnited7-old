@@ -68,7 +68,7 @@ exports.install = function(req, res) {
 			util.sendSysError(500, err, res);
 		} else {
 			if (admins.length > 0) {
-				if (req.query['msg'] == "success") {
+				if (req.query.msg === 'success') {
 					res.render(view_admin_install, {
 						msg: "success"
 					});
@@ -124,7 +124,7 @@ exports.doChangePwd = function(req, res) {
 							req.flash('successChangePwd', res.__("successChangePwd"));
 							res.redirect(url_admin_profile);
 						}
-					})
+					});
 				} else {
 					req.flash('errorMsgForChangePwd', res.__("wrongCurrentPassword"));
 					res.redirect(url_admin_profile);

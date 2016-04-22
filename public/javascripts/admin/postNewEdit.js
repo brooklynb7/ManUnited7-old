@@ -3,29 +3,29 @@
 		$('#title, #slug, #tag, #originalUrl, #source').placeholder();
 
 		var editor = $('textarea#editor').ckeditor({
-			language: $.cookie("i18nlocale")
+			language: $.cookie('i18nlocale')
 		}).editor;
 
 		editor.setData($('#content').val());
 
-		editor.on("instanceReady", function() {
-			this.document.on("keyup", function() {
+		editor.on('instanceReady', function() {
+			this.document.on('keyup', function() {
 				//console.log($('textarea#editor').val());
 			});
 		});
 
-		$("#publishBtn").on("click", function() {
-			$("#content").val($('textarea#editor').val());
+		$('#publishBtn').on('click', function() {
+			$('#content').val($('textarea#editor').val());
 			if (checkPostField()) {
-				showErrorMsg("");
+				showErrorMsg('');
 				$this = $(this);
 				publishPost($this);
 			}
 		});
-		$("#editBtn").on("click", function() {
-			$("#content").val($('textarea#editor').val());
+		$('#editBtn').on('click', function() {
+			$('#content').val($('textarea#editor').val());
 			if (checkPostField()) {
-				showErrorMsg("");
+				showErrorMsg('');
 				$this = $(this);
 				editPost($this);
 			}
@@ -55,9 +55,9 @@
 		$.ajax({
 			url: '/api/post/edit',
 			type: 'post',
-			data: getPostObject($("#postId").val()),
+			data: getPostObject($('#postId').val()),
 			success: function(rst) {
-				window.location.href = '/admin/post';
+				window.location.href = '/admin/posts';
 			},
 			error: function(jqXHR) {
 				showErrorMsg(jqXHR.responseText);
@@ -70,33 +70,35 @@
 
 	var getPostObject = function(id) {
 		var postObject = {
-			title: $.trim($("#title").val()),
-			slug: $.trim($("#slug").val()),
-			content: $.trim($("#content").val()),
-			tag: $.trim($("#tag").val()),
-			originalUrl: $.trim($("#originalUrl").val()),
-			source: $.trim($("#source").val()),
-			coverImg: $.trim($("#coverImg").val()),
-			visible: ($("#visible")[0].checked ? 1 : 0)
+			title: $.trim($('#title').val()),
+			slug: $.trim($('#slug').val()),
+			content: $.trim($('#content').val()),
+			tag: $.trim($('#tag').val()),
+			originalUrl: $.trim($('#originalUrl').val()),
+			source: $.trim($('#source').val()),
+			coverImg: $.trim($('#coverImg').val()),
+			visible: ($('#visible')[0].checked ? 1 : 0)
 		};
-		if(id) {
-			postObject["postId"] = id;
+		if (id) {
+			postObject.postId = id;
 		}
 		return postObject;
 	};
 
 	var checkPostField = function() {
-		if (!$.trim($("#title").val())) {
-			showErrorMsg($.i18n._("fillTitle"));
+		if (!$.trim($('#title').val())) {
+			showErrorMsg($.i18n._('fillTitle'));
 			return false;
-		} else if (!$.trim($("#slug").val())) {
-			showErrorMsg($.i18n._("fillSlug"));
+		} else if (!$.trim($('#slug').val())) {
+			showErrorMsg($.i18n._('fillSlug'));
 			return false;
-		}/* else if (!$.trim($("#short_desc").val())) {
-			showErrorMsg($.i18n._("fillShortDesc"));
-			return false;
-		} */else if (!$.trim($("#content").val())) {
-			showErrorMsg($.i18n._("fillContent"));
+		}
+		/* else if (!$.trim($('#short_desc').val())) {
+					showErrorMsg($.i18n._('fillShortDesc'));
+					return false;
+				} */
+		else if (!$.trim($('#content').val())) {
+			showErrorMsg($.i18n._('fillContent'));
 			return false;
 		} else {
 			return true;
@@ -104,6 +106,6 @@
 	};
 
 	var showErrorMsg = function(errMsg) {
-		$(".errorMsg").html(errMsg).show();
+		$('.errorMsg').html(errMsg).show();
 	};
 })(jQuery);

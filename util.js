@@ -7,8 +7,8 @@ exports.md5 = function(text) {
 };
 
 exports.random = function(upper, floor) {
-	var upper = typeof upper == 'number' ? upper : 100;
-	var floor = typeof floor == 'number' ? floor : 0;
+	upper = typeof upper === 'number' ? upper : 100;
+	floor = typeof floor === 'number' ? floor : 0;
 	return parseInt(Math.random() * (upper - floor + 1) + floor);
 };
 
