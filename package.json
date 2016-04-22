@@ -1,18 +1,19 @@
 {
-	"name": "ManUnited7",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node app.js"
-	},
-	"dependencies": {
-		"express": "3.4.1",
-		"ejs": "*",
-		"mongoskin": "*",
-		"request": "*",
-		"connect-flash": "*",
-		"i18n": "0.4.1",
-		"moment": "~2.5.1",
-		"wechat": "~0.6.5"
-	}
+  "name": "ManUnited7",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "connect-flash": "*",
+    "ejs": "*",
+    "express": "3.4.1",
+    "i18n": "0.4.1",
+    "moment": "~2.5.1",
+    "mongodb": "^2.1.16",
+    "mongoskin": "*",
+    "request": "*",
+    "wechat": "~0.6.5"
+  }
 }

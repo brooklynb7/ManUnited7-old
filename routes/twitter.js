@@ -21,9 +21,9 @@ exports.says = function(req, res) {
 			sayList: JSON.parse(body)
 		});
 	});
-	/*res.render("page/says", {
-		sayList: test_twitter_data
-	});*/
+	// res.render("page/says", {
+	// 	sayList: test_twitter_data
+	// });
 };
 
 exports.saysForAdmin = function(req, res) {
@@ -42,7 +42,7 @@ exports.showListTimeline = function(req, res) {
 		//res.render("api_demo/get_profile", {result:JSON.parse(body)});
 		res.send(JSON.parse(body));
 	});
-}
+};
 
 var generateOAuthRequestOption = function(api_url, req) {
 	var requestOption = {
