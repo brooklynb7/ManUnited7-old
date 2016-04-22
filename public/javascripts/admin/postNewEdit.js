@@ -1,4 +1,6 @@
 (function($) {
+	const admin_posts_url = '/admin/posts';
+
 	$(document).ready(function() {
 		$('#title, #slug, #tag, #originalUrl, #source').placeholder();
 
@@ -39,7 +41,7 @@
 			type: 'post',
 			data: getPostObject(),
 			success: function(rst) {
-				window.location.href = '/admin/post';
+				window.location.href = admin_posts_url;
 			},
 			error: function(jqXHR) {
 				showErrorMsg(jqXHR.responseText);
@@ -57,7 +59,7 @@
 			type: 'post',
 			data: getPostObject($('#postId').val()),
 			success: function(rst) {
-				window.location.href = '/admin/posts';
+				window.location.href = admin_posts_url;
 			},
 			error: function(jqXHR) {
 				showErrorMsg(jqXHR.responseText);
