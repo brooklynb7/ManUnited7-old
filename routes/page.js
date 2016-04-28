@@ -1,3 +1,5 @@
+'use strict';
+
 var postDao = require('../dao/post');
 var util = require('../util');
 var moment = require('moment');
@@ -35,7 +37,7 @@ exports.posts = function(req, res) {
 		});
 	};
 
-	var shortenContent = function (content, slug) {
+	var shortenContent = function(content, slug) {
 		if (content.indexOf('<!--more-->') > 0) {
 			content = content.substring(0, content.indexOf('<!--more-->')) +
 				'<p>......</p><p><a href="/post/' + slug + '" class="more">' + res.__('more') + '></a></p>';
@@ -56,8 +58,8 @@ exports.getPostBySlug = function(req, res) {
 	});
 };
 
-exports.timeline = function(req,res){
-	res.render('page/timeline',{});
+exports.timeline = function(req, res) {
+	res.render('page/timeline', {});
 };
 
 // URL: /404

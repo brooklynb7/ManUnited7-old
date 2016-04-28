@@ -1,3 +1,5 @@
+'use strict';
+
 var crypto = require('crypto');
 var moment = require('moment');
 var config = require('./config').config;

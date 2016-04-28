@@ -2,3 +2,4 @@ logs
 node_modules
 bower_components
 config.js
+_bash/**/*

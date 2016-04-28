@@ -1,6 +1,7 @@
 /*
  * Module dependencies.
  */
+'use strict';
 
 var express = require('express');
 var http = require('http');
@@ -41,7 +42,7 @@ app.locals.weibo = config.weibo;
 app.use(function(req, res, next) {
 	res.locals.i18nlocale = req.cookies.i18nlocale;
 	res.locals.session = req.session;
-	res.locals.moment= require('moment');
+	res.locals.moment = require('moment');
 	res.locals.moment.lang(res.locals.i18nlocale);
 	next();
 });
@@ -49,17 +50,18 @@ app.use(function(req, res, next) {
 //app.use(express.favicon(favicon_path));
 app.use('/resources', express.static(static_path));
 
-//app.set("env","production");
+app.set('env', 'development');
 
 // development only
-if ('development' == app.get('env')) {
+if ('development' === app.get('env')) {
 	app.use(express.errorHandler());
-	app.use(express.logger("dev"));
+	app.use(express.logger('dev'));
 }
 
 //production only
-if ('production' == app.get('env')) {
+if ('production' === app.get('env')) {
 	app.use(express.logger());
+	db(config.db.mongo);
 }
 
 app.use(app.router);

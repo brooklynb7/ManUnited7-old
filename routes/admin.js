@@ -1,9 +1,11 @@
+'use strict';
+
 var adminDao = require('../dao/admin');
 var postDao = require('../dao/post');
 var util = require('../util');
 var moment = require('moment');
 var config = require('../config').config;
-var fs = require("fs");
+var fs = require('fs');
 
 var url_admin = '/admin';
 var url_admin_login = '/admin/login';
@@ -53,9 +55,9 @@ exports.doLogin = function(req, res) {
 			if (result) {
 				req.session.admin_id = result._id.toString();
 				req.session.admin_name = result.name;
-				res.redirect(req.headers['referer']);
+				res.redirect(req.headers.referer);
 			} else {
-				req.flash('errorMsg', res.__("wrongUserPassword"));
+				req.flash('errorMsg', res.__('wrongUserPassword'));
 				res.redirect(url_admin_login);
 			}
 		}
@@ -70,7 +72,7 @@ exports.install = function(req, res) {
 			if (admins.length > 0) {
 				if (req.query.msg === 'success') {
 					res.render(view_admin_install, {
-						msg: "success"
+						msg: 'success'
 					});
 				} else {
 					res.render(view_admin_install, {
@@ -91,7 +93,7 @@ exports.doInstall = function(req, res) {
 		if (err) {
 			util.sendSysError(500, err, res);
 		} else {
-			res.redirect(url_admin_install + "?msg=success");
+			res.redirect(url_admin_install + '?msg=success');
 		}
 	});
 };
@@ -102,8 +104,8 @@ exports.index = function(req, res) {
 
 exports.profile = function(req, res) {
 	res.render(view_admin_profile, {
-		errorMsgForChangePwd: req.flash("errorMsgForChangePwd"),
-		successChangePwd: req.flash("successChangePwd")
+		errorMsgForChangePwd: req.flash('errorMsgForChangePwd'),
+		successChangePwd: req.flash('successChangePwd')
 	});
 };
 
@@ -116,17 +118,17 @@ exports.doChangePwd = function(req, res) {
 			util.sendSysError(500, err, res);
 		} else {
 			if (admin) {
-				if (admin.password == currentPwd) {
+				if (admin.password === currentPwd) {
 					adminDao.changePwd(adminId, newPwd, function(err, rst) {
 						if (err) {
 							util.sendSysError(500, err, res);
 						} else {
-							req.flash('successChangePwd', res.__("successChangePwd"));
+							req.flash('successChangePwd', res.__('successChangePwd'));
 							res.redirect(url_admin_profile);
 						}
 					});
 				} else {
-					req.flash('errorMsgForChangePwd', res.__("wrongCurrentPassword"));
+					req.flash('errorMsgForChangePwd', res.__('wrongCurrentPassword'));
 					res.redirect(url_admin_profile);
 				}
 			}
@@ -162,7 +164,7 @@ exports.postEdit = function(req, res) {
 };
 
 exports.timeline = function(req, res) {
-	var timeline_data = fs.readFileSync("./data/timeline.js", "utf-8");
+	var timeline_data = fs.readFileSync('./data/timeline.js', 'utf-8');
 	res.render(view_admin_timeline, {
 		timeline_list: timeline_data
 	});

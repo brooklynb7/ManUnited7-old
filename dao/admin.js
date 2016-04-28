@@ -1,5 +1,7 @@
+'use strict';
+
 var db = require('../config').db;
-db.bind("admin");
+db.bind('admin');
 
 exports.getAdmin = function(user, pwd, callback) {
 	db.admin.findOne({
