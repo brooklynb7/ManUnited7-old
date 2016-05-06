@@ -19,7 +19,7 @@ module.exports = function(app) {
 			res.reply(message.Label);
 		} else if (is_normal_text(message)) {
 			var msg = message.Content;
-			if (msg.toLowerCase() == 'today') {
+			if (msg.toLowerCase() === 'today') {
 				handle_today_post_list(res);
 			} else {
 				res.reply('');
